@@ -36,3 +36,4 @@
 
 [文本智能校对大赛冠军方案！已落地应用，来自苏州大学、达摩院团队](https://mp.weixin.qq.com/s/bBJ58agJTlCxHhYrP35DNA)
 
+[通义QwQ-32B+Milvus，消费级显卡布满血大模型与RAG的时代来了！](https://mp.weixin.qq.com/s/hECwWx1AOF0HM8TCpNZo8Q)
