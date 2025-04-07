@@ -1,7 +1,6 @@
+# Learn git the easy way
 
-## Learn git the easy way
- 
--   [一文学会 git 命令](#一文学会-git-命令)
+-   [Learn git the easy way](#learn-git-the-easy-way)
     -   [Git 配置](#git-配置)
     -   [Git 工作流程](#git-工作流程)
         -   [1. 克隆仓库](#克隆仓库)
@@ -41,7 +40,8 @@
 Git
 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
 
-### Git 配置
+Git 配置
+--------
 
 Git 提供了 `git config` 命令，用来配置或读取相应的工作环境变量。
 
@@ -69,9 +69,10 @@ git config --global https.proxy 'socks5://用户名:密码@代理地址:端口'
 
 可以使用 `git config --list` 命令查看已有的配置信息。
 
-### Git 工作流程
+Git 工作流程
+------------
 
-#### 1. 克隆仓库
+### 1. 克隆仓库
 
 首先需要将远程仓库克隆到本地：
 
@@ -80,7 +81,7 @@ git clone https://github.com/username/repo.git
 cd repo
 ```
 
-#### 2. 创建新分支
+### 2. 创建新分支
 
 为了避免直接在 main 或 master 分支上进行开发，通常会创建一个新的分支：
 
@@ -88,7 +89,7 @@ cd repo
 git checkout -b new-feature
 ```
 
-#### 3. 暂存文件
+### 3. 暂存文件
 
 将修改过的文件添加到暂存区，以便进行下一步的提交操作：
 
@@ -103,7 +104,7 @@ git add .
 git add -A
 ```
 
-#### 4. 提交更改
+### 4. 提交更改
 
 将暂存区的更改提交到本地仓库，并添加提交信息：
 
@@ -111,7 +112,7 @@ git add -A
 git commit -m "Add new feature"
 ```
 
-#### 5. 推送更改
+### 5. 推送更改
 
 在推送本地更改之前，最好从远程仓库拉取最新的更改，以避免冲突：
 
@@ -128,7 +129,7 @@ git pull origin new-feature
 git push origin new-feature
 ```
 
-#### 6. 创建 Pull Request（PR）
+### 6. 创建 Pull Request（PR）
 
 在 GitHub 或其他托管平台上创建 Pull
 Request，邀请团队成员进行代码审查。PR 合并后，你的更改就会合并到主分支。
@@ -141,7 +142,7 @@ git pull origin main
 git merge new-feature
 ```
 
-#### 7. 删除分支
+### 7. 删除分支
 
 如果不再需要新功能分支，可以将其删除：
 
@@ -155,9 +156,10 @@ git branch -d new-feature
 git push origin --delete new-feature
 ```
 
-### Git 工作区、暂存区和版本库
+Git 工作区、暂存区和版本库
+--------------------------
 
-![](D:\nlp\doc\markdown\git1.png)
+![](img/git1.png)
 
 我们先来理解下 Git 工作区、暂存区和版本库概念：
 
@@ -169,15 +171,15 @@ git push origin --delete new-feature
 -   **版本库：** 工作区有一个隐藏目录 .git，这个不算工作区，而是 Git
     的版本库。
 
-#### 1. 工作区（Working Directory）
+### 1. 工作区（Working Directory）
 
 工作区是本地计算机上的项目目录，在这里可以进行文件的创建、修改和删除操作。工作区包含了当前项目的所有文件和子目录。
 
-#### 2. 暂存区（Staging Area）
+### 2. 暂存区（Staging Area）
 
 暂存区是一个临时存储区域，它包含了即将被提交到版本库中的文件快照，在提交之前，你可以选择性地将工作区中的修改添加到暂存区。**常用命令：**
 
-##### git ls-files
+#### git ls-files
 
 查看暂存区的文件：
 
@@ -191,7 +193,7 @@ git ls-files -o
 git ls-files -s
 ```
 
-##### git add
+#### git add
 
 添加文件到暂存区：
 
@@ -206,18 +208,18 @@ git add .
 git add -A
 ```
 
-##### git mv
+#### git mv
 
 用于在 Git
 仓库中重命名或移动文件。该命令会创建一个新的文件（目录），并将其添加到暂存区，同时删除旧的文件（目录）。使用
 `git mv`
-可以保持文件的历史记录，即使文件名变了，也能追踪到之前的历史记录‌。
+可以保持文件的历史记录，即使文件名变了，也能追踪到之前的历史记录。
 
 ``` {.shell}
 git mv [file] [newfile] 
 ```
 
-##### git rm
+#### git rm
 
 从暂存区中删除文件：
 
@@ -228,7 +230,7 @@ git rm -r filename
 git rm -r --cached filename
 ```
 
-##### git status
+#### git status
 
 查看上次提交之后是否有对文件进行再次修改：
 
@@ -255,13 +257,13 @@ git status 命令会显示以下信息：
 
 -   未跟踪的文件：显示尚未纳入版本控制的新文件列表。
 
-#### 3. 版本库（Repository）
+### 3. 版本库（Repository）
 
 版本库包含项目的所有版本历史记录。
 
 每次提交都会在版本库中创建一个新的快照，这些快照是不可变的，确保了项目的完整历史记录。**常用命令：**
 
-##### git commit
+#### git commit
 
 将暂存区的更改提交到本地版本库：
 
@@ -269,7 +271,7 @@ git status 命令会显示以下信息：
 git commit -m "Commit message"
 ```
 
-##### git log
+#### git log
 
 查看提交历史：
 
@@ -291,7 +293,7 @@ git log --no-merges
 git log --stat
 ```
 
-##### git reset
+#### git reset
 
 回退版本，可以指定退回某一次提交的版本。它可以通过改变 HEAD
 指针来修改历史提交记录，影响暂存区和工作区。命令语法格式如下：
@@ -342,7 +344,7 @@ git reset --hard origin/main
 
 -   以此类推 ...
 
-##### git diff
+#### git diff
 
 用于比较不同状态下的文件差异。
 
@@ -432,11 +434,12 @@ git diff branch1 branch2 path/to/directory/
 这将显示分支 `branch1` 和 `branch2` 之间，目录 `path/to/directory/`
 的差异。
 
-### Git 远程操作
+Git 远程操作
+------------
 
 **常用命令：**
 
-##### git remote
+#### git remote
 
 用于管理 Git 仓库中的远程仓库。常见用法：
 
@@ -457,7 +460,7 @@ git diff branch1 branch2 path/to/directory/
 -   `git remote show <remote_name>`：显示指定远程仓库的详细信息，包括
     URL 和跟踪分支。
 
-##### git fetch
+#### git fetch
 
 用于从远程仓库获取最新的历史记录和数据，但不会自动合并或更改项目当前的工作目录和暂存区。这个命令将远程仓库的更新信息下载存储在本地仓库的
 `.git` 目录中，但不会影响工作目录或暂存区。
@@ -486,7 +489,7 @@ git fetch origin main:brantest
 这个命令会将远程仓库的 `main` 分支的内容更新到本地的 `brantest` 分支。如果本地还没有 `brantest` 分支，Git
 会自动创建一个新的分支。
 
-##### git pull
+#### git pull
 
 用于从远程仓库获取代码并合并到本地分支。这个命令其实是
 `git fetch` 和 `git merge` 的简写，先从远程仓库获取最新的提交记录，然后将这些提交记录合并到项目当前的分支中。
@@ -512,7 +515,7 @@ git pull origin main:brantest
 这会拉取远程 `main` 分支的最新更改，并合并到本地的 `brantest`
 分支，如果本地不存在 `brantest` 分支，Git 会自动创建它。
 
-##### git push
+#### git push
 
 用于将本地仓库的更改（commit）上传到远程仓库。
 
@@ -566,7 +569,7 @@ git push -u origin main
 这样会将本地的 `main` 分支与远程仓库 `origin` 关联，之后只需
 `git push`。
 
-##### git submodule
+#### git submodule
 
 用于管理包含其他 Git
 仓库的项目。这个命令对于大型项目或需要将外部库集成到项目中的情况非常有用。通过使用子模块，你可以将外部库作为你的项目的一部分来管理，而不必将其直接合并到主仓库中。
@@ -649,15 +652,16 @@ git submodule update --recursive --remote
 -   `--recursive`：递归地更新所有子模块（包括子模块的子模块）。
 -   `--remote`：从子模块的远程仓库拉取最新的更改。
 
-### Git 分支管理
+Git 分支管理
+------------
 
 Git 分支管理是 Git
 强大功能之一，能够让多个开发人员并行工作，开发新功能、修复 bug
 或进行实验，而不会影响主代码库。
 
-`<img src="file:///D:/nlp/doc/markdown/git_branch.png" title="" alt="" width="527">`{=html}
+![](img/git2.png)
 
-##### 1. 创建分支
+#### 1. 创建分支
 
 创建新分支并切换到该分支：
 
@@ -692,7 +696,7 @@ dev 分支，使用 `git stash pop`
 -   切回分支 A
 -   运行 `git stash pop` 来恢复工作区暂存的改动
 
-##### 2. 查看分支
+#### 2. 查看分支
 
 查看所有本地分支：
 
@@ -712,7 +716,7 @@ git branch -r
 git branch -a
 ```
 
-##### 3. 合并分支
+#### 3. 合并分支
 
 将其他分支合并到当前分支：
 
@@ -736,7 +740,7 @@ git add <conflict-file>
 git commit
 ```
 
-##### 4. 删除分支
+#### 4. 删除分支
 
 删除本地分支：
 
@@ -756,7 +760,7 @@ git branch -D <branchname>
 git push origin --delete <branchname>
 ```
 
-##### 5. 拉取分支
+#### 5. 拉取分支
 
 拉取远程分支 `origin/main` 的最新提交并合并至本地当前分支：
 
