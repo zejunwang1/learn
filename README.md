@@ -10,7 +10,7 @@
 
 英文在线地址：http://neuralnetworksanddeeplearning.com/
 
-书中代码示例：https://github.com/unexploredtest/neural-networks-and-deep-learning
+书中代码示例：https://github.com/mnielsen/neural-networks-and-deep-learning
 
 ## learn-regex
 
