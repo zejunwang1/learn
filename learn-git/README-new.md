@@ -2,21 +2,21 @@
     -   [Git 配置](#git-配置)
     -   [Git 工作流程](#git-工作流程)
         -   [a) 克隆仓库](#a-克隆仓库)
-        -   [2. 创建新分支](#创建新分支)
-        -   [3. 暂存文件](#暂存文件)
-        -   [4. 提交更改](#提交更改)
-        -   [5. 推送更改](#推送更改)
-        -   [6. 创建 Pull Request（PR）](#创建-pull-requestpr)
-        -   [7. 删除分支](#删除分支)
+        -   [b) 创建新分支](#b-创建新分支)
+        -   [c) 暂存文件](#c-暂存文件)
+        -   [d) 提交更改](#d-提交更改)
+        -   [e) 推送更改](#e-推送更改)
+        -   [f) 创建 Pull Request（PR）](#f-创建-pull-requestpr)
+        -   [g) 删除分支](#g-删除分支)
     -   [Git 工作区、暂存区和版本库](#git-工作区暂存区和版本库)
-        -   [1. 工作区（Working Directory）](#工作区working-directory)
-        -   [2. 暂存区（Staging Area）](#暂存区staging-area)
+        -   [a) 工作区（Working Directory）](#a-工作区working-directory)
+        -   [b) 暂存区（Staging Area）](#b-暂存区staging-area)
             -   [git ls-files](#git-ls-files)
             -   [git add](#git-add)
             -   [git mv](#git-mv)
             -   [git rm](#git-rm)
             -   [git status](#git-status)
-        -   [3. 版本库（Repository）](#版本库repository)
+        -   [c) 版本库（Repository）](#c-版本库repository)
             -   [git commit](#git-commit)
             -   [git log](#git-log)
             -   [git reset](#git-reset)
@@ -27,12 +27,20 @@
         -   [git pull](#git-pull)
         -   [git push](#git-push)
         -   [git submodule](#git-submodule)
+            -   [a) 初始化子模块](#a-初始化子模块)
+            -   [b) 更新子模块](#b-更新子模块)
+            -   [c) 添加子模块](#c-添加子模块)
+            -   [d) 移除子模块](#d-移除子模块)
+            -   [e) 列出子模块](#e-列出子模块)
+            -   [f) 更新所有子模块](#f-更新所有子模块)
     -   [Git 分支管理](#git-分支管理)
-        -   [1. 创建分支](#创建分支)
-        -   [2. 查看分支](#查看分支)
-        -   [3. 合并分支](#合并分支)
-        -   [4. 删除分支](#删除分支-1)
-        -   [5. 拉取分支](#拉取分支)
+        -   [a) 创建分支](#a-创建分支)
+        -   [b) 查看分支](#b-查看分支)
+        -   [c) 合并分支](#c-合并分支)
+        -   [d) 删除分支](#d-删除分支)
+        -   [e) 拉取分支](#e-拉取分支)
+            -   [本地提交前报错](#本地提交前报错)
+            -   [本地提交后报错](#本地提交后报错)
 
 Learn git the easy way
 ======================
@@ -81,7 +89,7 @@ git clone https://github.com/username/repo.git
 cd repo
 ```
 
-### 2. 创建新分支
+### b) 创建新分支
 
 为了避免直接在 main 或 master 分支上进行开发，通常会创建一个新的分支：
 
@@ -89,7 +97,7 @@ cd repo
 git checkout -b new-feature
 ```
 
-### 3. 暂存文件
+### c) 暂存文件
 
 将修改过的文件添加到暂存区，以便进行下一步的提交操作：
 
@@ -104,7 +112,7 @@ git add .
 git add -A
 ```
 
-### 4. 提交更改
+### d) 提交更改
 
 将暂存区的更改提交到本地仓库，并添加提交信息：
 
@@ -112,7 +120,7 @@ git add -A
 git commit -m "Add new feature"
 ```
 
-### 5. 推送更改
+### e) 推送更改
 
 在推送本地更改之前，最好从远程仓库拉取最新的更改，以避免冲突：
 
@@ -129,7 +137,7 @@ git pull origin new-feature
 git push origin new-feature
 ```
 
-### 6. 创建 Pull Request（PR）
+### f) 创建 Pull Request（PR）
 
 在 GitHub 或其他托管平台上创建 Pull
 Request，邀请团队成员进行代码审查。PR 合并后，你的更改就会合并到主分支。
@@ -142,7 +150,7 @@ git pull origin main
 git merge new-feature
 ```
 
-### 7. 删除分支
+### g) 删除分支
 
 如果不再需要新功能分支，可以将其删除：
 
@@ -159,7 +167,7 @@ git push origin --delete new-feature
 Git 工作区、暂存区和版本库
 --------------------------
 
-![](D:\nlp\doc\markdown\git1.png)
+![](img/git1.png)
 
 我们先来理解下 Git 工作区、暂存区和版本库概念：
 
@@ -171,11 +179,11 @@ Git 工作区、暂存区和版本库
 -   **版本库：** 工作区有一个隐藏目录 .git，这个不算工作区，而是 Git
     的版本库。
 
-### 1. 工作区（Working Directory）
+### a) 工作区（Working Directory）
 
 工作区是本地计算机上的项目目录，在这里可以进行文件的创建、修改和删除操作。工作区包含了当前项目的所有文件和子目录。
 
-### 2. 暂存区（Staging Area）
+### b) 暂存区（Staging Area）
 
 暂存区是一个临时存储区域，它包含了即将被提交到版本库中的文件快照，在提交之前，你可以选择性地将工作区中的修改添加到暂存区。**常用命令：**
 
@@ -213,7 +221,7 @@ git add -A
 用于在 Git
 仓库中重命名或移动文件。该命令会创建一个新的文件（目录），并将其添加到暂存区，同时删除旧的文件（目录）。使用
 `git mv`
-可以保持文件的历史记录，即使文件名变了，也能追踪到之前的历史记录‌。
+可以保持文件的历史记录，即使文件名变了，也能追踪到之前的历史记录。
 
 ``` {.shell}
 git mv [file] [newfile] 
@@ -257,7 +265,7 @@ git status 命令会显示以下信息：
 
 -   未跟踪的文件：显示尚未纳入版本控制的新文件列表。
 
-### 3. 版本库（Repository）
+### c) 版本库（Repository）
 
 版本库包含项目的所有版本历史记录。
 
@@ -574,7 +582,7 @@ git push -u origin main
 用于管理包含其他 Git
 仓库的项目。这个命令对于大型项目或需要将外部库集成到项目中的情况非常有用。通过使用子模块，你可以将外部库作为你的项目的一部分来管理，而不必将其直接合并到主仓库中。
 
-**1. 初始化子模块**
+##### a) 初始化子模块
 
 ``` {.shell}
 git submodule init
@@ -592,7 +600,7 @@ git submodule init
 git submodule update
 ```
 
-**2. 更新子模块**
+##### b) 更新子模块
 
 ``` {.shell}
 git submodule update
@@ -601,7 +609,7 @@ git submodule update
 这个命令会从子模块的远程仓库中拉取子模块的内容，并将其更新到
 `.gitmodules` 文件中指定的提交。
 
-**3. 添加子模块**
+##### c) 添加子模块
 
 ``` {.shell}
 git submodule add <repo-url> [<path>]
@@ -617,7 +625,7 @@ git submodule add <repo-url> [<path>]
 git submodule add https://github.com/example/libfoo.git libfoo
 ```
 
-**4. 移除子模块**
+##### d) 移除子模块
 
 ``` {.shell}
 git submodule deinit <path>
@@ -635,7 +643,7 @@ git rm libfoo
 rm -rf .git/modules/libfoo
 ```
 
-**5. 列出子模块**
+##### e) 列出子模块
 
 ``` {.shell}
 git submodule
@@ -643,7 +651,7 @@ git submodule
 
 列出当前仓库中的所有子模块，以及它们的提交哈希和路径。
 
-**6. 更新所有子模块**
+##### f) 更新所有子模块
 
 ``` {.shell}
 git submodule update --recursive --remote
@@ -659,9 +667,9 @@ Git 分支管理是 Git
 强大功能之一，能够让多个开发人员并行工作，开发新功能、修复 bug
 或进行实验，而不会影响主代码库。
 
-`<img src="file:///D:/nlp/doc/markdown/git_branch.png" title="" alt="" width="527">`{=html}
+![](img/git2.png)
 
-#### 1. 创建分支
+#### a) 创建分支
 
 创建新分支并切换到该分支：
 
@@ -696,7 +704,7 @@ dev 分支，使用 `git stash pop`
 -   切回分支 A
 -   运行 `git stash pop` 来恢复工作区暂存的改动
 
-#### 2. 查看分支
+#### b) 查看分支
 
 查看所有本地分支：
 
@@ -716,7 +724,7 @@ git branch -r
 git branch -a
 ```
 
-#### 3. 合并分支
+#### c) 合并分支
 
 将其他分支合并到当前分支：
 
@@ -740,7 +748,7 @@ git add <conflict-file>
 git commit
 ```
 
-#### 4. 删除分支
+#### d) 删除分支
 
 删除本地分支：
 
@@ -760,7 +768,7 @@ git branch -D <branchname>
 git push origin --delete <branchname>
 ```
 
-#### 5. 拉取分支
+#### e) 拉取分支
 
 拉取远程分支 `origin/main` 的最新提交并合并至本地当前分支：
 
@@ -768,7 +776,7 @@ git push origin --delete <branchname>
 git pull origin main
 ```
 
-**5.1 本地提交前报错**
+##### 本地提交前报错
 
 有时候在本地提交代码前想使用 `git pull` 拉取远程仓库更新时会报错：
 
@@ -818,7 +826,7 @@ CONFLICT (content): Merge conflict in README.md
 发现在 `README.md`
 文件里会有冲突，我们手动解决下冲突，就可以正常添加和提交了。
 
-**5.2 本地提交后报错**
+##### 本地提交后报错
 
 有时候在本地工作区修改代码提交后，拉取远程分支最新提交时会报错：
 
