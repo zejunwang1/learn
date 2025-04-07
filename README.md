@@ -2,11 +2,11 @@
 
 ## learn-git
 
-一文入门 git 常用命令和操作，详见 `learn-git/README.md`。
+一文入门 git 常用命令和操作，详见 [learn-git/README.md](https://github.com/zejunwang1/learn/blob/main/learn-git/README.md)。
 
 ## learn-neural-network
 
-美国量子物理学家、科学作家 [Michael Nielsen](https://michaelnielsen.org/) 编写的非常好的深度学习入门书籍 -《Neural Network and Deep Learning》，中文译为《神经网络与深度学习》。
+美国量子物理学家、科学作家 [Michael Nielsen](https://michaelnielsen.org/) 编写的非常好的深度学习入门书籍 -《Neural Network and Deep Learning》，中文译为《神经网络与深度学习》。中文翻译版见 [learn-neural-network](https://github.com/zejunwang1/learn/tree/main/learn-neural-network) 文件夹。
 
 英文在线地址：http://neuralnetworksanddeeplearning.com/
 
@@ -14,11 +14,11 @@
 
 ## learn-regex
 
-轻松学习正则表达式，详见 `learn-regex/README.md`。
+轻松学习正则表达式，详见 [learn-regex/README.md](https://github.com/zejunwang1/learn/blob/main/learn-regex/README.md)。
 
 ## learn-unicode
 
-轻松学习 unicode 字符编码，详见 `learn-unicode/README.md`。
+轻松学习 unicode 字符编码，详见 [learn-unicode/README.md](https://github.com/zejunwang1/learn/blob/main/learn-unicode/README.md)。
 
 ## learn-articles
 
