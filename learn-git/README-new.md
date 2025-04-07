@@ -1,3 +1,5 @@
+# Learn git the easy way
+
 -   [Learn git the easy way](#learn-git-the-easy-way)
     -   [Git 配置](#git-配置)
     -   [Git 工作流程](#git-工作流程)
@@ -42,8 +44,7 @@
             -   [本地提交前报错](#本地提交前报错)
             -   [本地提交后报错](#本地提交后报错)
 
-Learn git the easy way
-======================
+
 
 Git
 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。
@@ -669,7 +670,7 @@ Git 分支管理是 Git
 
 ![](img/git2.png)
 
-#### a) 创建分支
+### a) 创建分支
 
 创建新分支并切换到该分支：
 
@@ -704,7 +705,7 @@ dev 分支，使用 `git stash pop`
 -   切回分支 A
 -   运行 `git stash pop` 来恢复工作区暂存的改动
 
-#### b) 查看分支
+### b) 查看分支
 
 查看所有本地分支：
 
@@ -724,7 +725,7 @@ git branch -r
 git branch -a
 ```
 
-#### c) 合并分支
+### c) 合并分支
 
 将其他分支合并到当前分支：
 
@@ -748,7 +749,7 @@ git add <conflict-file>
 git commit
 ```
 
-#### d) 删除分支
+### d) 删除分支
 
 删除本地分支：
 
@@ -768,7 +769,7 @@ git branch -D <branchname>
 git push origin --delete <branchname>
 ```
 
-#### e) 拉取分支
+### e) 拉取分支
 
 拉取远程分支 `origin/main` 的最新提交并合并至本地当前分支：
 
@@ -776,7 +777,7 @@ git push origin --delete <branchname>
 git pull origin main
 ```
 
-##### 本地提交前报错
+#### 本地提交前报错
 
 有时候在本地提交代码前想使用 `git pull` 拉取远程仓库更新时会报错：
 
@@ -826,7 +827,7 @@ CONFLICT (content): Merge conflict in README.md
 发现在 `README.md`
 文件里会有冲突，我们手动解决下冲突，就可以正常添加和提交了。
 
-##### 本地提交后报错
+#### 本地提交后报错
 
 有时候在本地工作区修改代码提交后，拉取远程分支最新提交时会报错：
 
