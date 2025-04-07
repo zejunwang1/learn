@@ -6,7 +6,7 @@
 
 ## learn-neural-network
 
-美国量子物理学家、科学作家 [Michael Nielsen](https://michaelnielsen.org/) 编写的非常好的深度学习入门书籍 -《Neural Network and Deep Learning》，中文译为《神经网络与深度学习》。中文翻译版见 [learn-neural-network](https://github.com/zejunwang1/learn/tree/main/learn-neural-network) 文件夹。
+美国量子物理学家、科学作家 [Michael Nielsen](https://michaelnielsen.org/) 编写的非常好的深度学习入门书籍 -《Neural Network and Deep Learning》，中文译为《神经网络与深度学习》。中文翻译版见 `learn-neural-network/4-神经网络与深度学习-michael中文版.pdf`。
 
 英文在线地址：http://neuralnetworksanddeeplearning.com/
 
