@@ -1,4 +1,4 @@
-# learn
+# learn: some technical learning and summary
 
 ## learn-git
 
@@ -33,3 +33,6 @@
 [10G显存，使用Unsloth微调Qwen2并使用Ollama推理](https://mp.weixin.qq.com/s/MDUXxQ-1KzAp6TV33tB4tA)
 
 [Unsloth微调Llama3-8B，提速44.35%，节省42.58%显存，最少仅需7.75GB显存](https://mp.weixin.qq.com/s/Zlp7GM37_bkvvQZedzNp0g)
+
+[文本智能校对大赛冠军方案！已落地应用，来自苏州大学、达摩院团队](https://mp.weixin.qq.com/s/bBJ58agJTlCxHhYrP35DNA)
+
