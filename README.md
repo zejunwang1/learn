@@ -22,7 +22,7 @@
 
 ## learn-articles
 
-一些关于 RAG 和模型微调的技术文章：
+**一些关于 RAG 和大模型微调的技术文章：**
 
 [单卡4090微调DeepSeek-R1-32B](https://mp.weixin.qq.com/s/pMTWQknNWTFJTKVyA7tpWw)
 
@@ -34,6 +34,8 @@
 
 [Unsloth微调Llama3-8B，提速44.35%，节省42.58%显存，最少仅需7.75GB显存](https://mp.weixin.qq.com/s/Zlp7GM37_bkvvQZedzNp0g)
 
+[通义QwQ-32B+Milvus，消费级显卡布满血大模型与RAG的时代来了！](https://mp.weixin.qq.com/s/hECwWx1AOF0HM8TCpNZo8Q)
+
 [文本智能校对大赛冠军方案！已落地应用，来自苏州大学、达摩院团队](https://mp.weixin.qq.com/s/bBJ58agJTlCxHhYrP35DNA)
 
-[通义QwQ-32B+Milvus，消费级显卡布满血大模型与RAG的时代来了！](https://mp.weixin.qq.com/s/hECwWx1AOF0HM8TCpNZo8Q)
+[一种全新的拼写纠错新方法：EMNLP 2024发表、CIPS-LMG 2024最佳海报、金山办公纠错比赛冠军](https://mp.weixin.qq.com/s/B60GUMO07F4DwJuqV7Ddxg)
